@@ -1,0 +1,1 @@
+full_name=input("Por favor ingrese su nombre completo: ")
