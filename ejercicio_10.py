@@ -51,26 +51,16 @@ elif year==year_b:
 
 #verificador de distancias entre fechas
 
-gt_day=int(greater_date[0])
-gt_month=int(greater_date[1])
-gt_year=int(greater_date[2])
-
-ls_day=int(lesser_date[0])
-ls_month=int(lesser_date[1])
-ls_year=int(lesser_date[2])
+date_1_a=year*365+month*30+day
+date_2_b=year_b*365+month_b*30+day_b
 
 days_btwn=0
 
-if year==year_b and month==month_b and day==day_b:
-    print("No hay días de diferencia entre ambas")
-
-elif (gt_day != ls_day) and gt_month==ls_month and gt_year==ls_year:
-    days_btwn=gt_day-ls_day
-    print(f"La diferencia de días es de {days_btwn}")
-
-elif gt_day == ls_day and gt_month!=ls_month and gt_year==ls_year:
-    days_btwn= (gt_month-ls_month)*30
-    print(f"La diferencia de días es de {days_btwn}")
-
+if greater_date==date_a:
+    days_btwn=date_1_a-date_2_b
+    print(f"Los días entre {date_1} y {date_2} son {days_btwn}")
+elif greater_date==date_b:
+    days_btwn=date_2_b-date_1_a
+    print(f"Los días entre {date_1} y {date_2} son {days_btwn}")
 
 
