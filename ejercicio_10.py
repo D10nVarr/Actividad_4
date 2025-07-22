@@ -14,5 +14,17 @@ year_b=int(date_b[2])
 
 #verificación de la fecha mayor
 if year>year_b:
-    print("La fecha mayor es date_1")
+    print(f"La fecha mayor es {date_1}")
+elif year<year_b:
+    print(f"La fecha mayor es {date_2}")
+elif year==year_b:
+    if month > month_b:
+        print(f"La fecha mayor es {date_1}")
+    elif month < month_b:
+        print(f"La fecha mayor es {date_2}")
+    elif month == month_b:
+        if day > day_b:
+            print(f"La fecha mayor es {date_1}")
+        elif day < day_b:
+            print(f"La fecha mayor es {date_2}")
 
