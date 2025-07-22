@@ -14,7 +14,6 @@ month_b=int(date_b[1])
 year_b=int(date_b[2])
 
 greater_date=0
-lesser_date=0
 
 if ((day<0 or day>30) or (month<0 or month>12) or (year<0)) or (day_b<0) or (month_b<0) or (year_b<0):
     print("La fecha no es válida")
@@ -22,37 +21,31 @@ if ((day<0 or day>30) or (month<0 or month>12) or (year<0)) or (day_b<0) or (mon
 #verificación de la fecha mayor
 elif year>year_b:
     greater_date=date_a
-    lesser_date=date_b
     print(f"La fecha mayor es {date_1}")
 elif year<year_b:
     greater_date = date_b
-    lesser_date = date_a
     print(f"La fecha mayor es {date_2}")
 elif year==year_b:
     if month > month_b:
         greater_date = date_a
-        lesser_date = date_b
         print(f"La fecha mayor es {date_1} y esta en el mismo año que {date_2}")
     elif month < month_b:
         greater_date = date_b
-        lesser_date = date_a
         print(f"La fecha mayor es {date_2}")
     elif month == month_b:
         if day > day_b:
             greater_date = date_a
-            lesser_date = date_b
             print(f"La fecha mayor es {date_1} y esta en el mismo mes y año que {date_2}")
         elif day < day_b:
             greater_date = date_b
-            lesser_date = date_a
             print(f"La fecha mayor es {date_2}")
         elif day == day_b:
             print(f"Son la misma fecha")
 
 #verificador de distancias entre fechas
 
-date_1_a=year*365+month*30+day
-date_2_b=year_b*365+month_b*30+day_b
+date_1_a=year*360+month*30+day
+date_2_b=year_b*360+month_b*30+day_b
 
 days_btwn=0
 
